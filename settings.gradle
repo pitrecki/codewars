@@ -1,3 +1,4 @@
 rootProject.name = 'org.pitrecki.codewars'
 
 include 'task01'
+include 'task02'
