@@ -22,7 +22,7 @@ subprojects {
                 "org.assertj:assertj-core:$assertJVersion",
                 "pl.pragmatists:JUnitParams:1.1.1"
         )
-        testCompile(          "junit:junit:4.12") {
+        testCompile("junit:junit:4.12") {
             exclude module: 'hamcrest-core'
         }
     }
