@@ -1,0 +1,12 @@
+os: linux
+
+language: java
+
+jobs:
+  include:
+    - stage: "Tests"
+      name: "Unit Tests"
+      jdk:
+        - oraclejdk11
+        - openjdk11
+      script: ./gradlew clean test
