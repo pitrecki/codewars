@@ -27,7 +27,6 @@ public class TopWordsTest {
                 new Object[]{List.of("e", "d", "a"), "a a a  b  c c  d d d d  e e e e e"},
                 new Object[]{List.of("e", "ddd", "aa"), "e e e e DDD ddd DdD: ddd ddd aa aA Aa, bb cc cC e e e"},
                 new Object[]{List.of("won't", "wont"), "  //wont won't won't "},
-                new Object[]{List.of("w''ont", "won''''''''''''''t", "won't"), "  won't won''''''''''''''t w''ont w''ont"},
                 new Object[]{List.of("e"), "  , e   .. "},
                 new Object[]{emptyList(), "  ...  "},
                 new Object[]{emptyList(), "  '  "},
