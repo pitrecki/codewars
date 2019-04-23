@@ -1,20 +1,20 @@
 os: linux
 
 language: java
+jdk:
+  - oraclejdk11
+  - openjdk11
 
-#cache:
-#  directories:
-#    - $HOME/.gradle/caches/
-#    - $HOME/.gradle/wrapper/
+before_cache:
+  - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
+  - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
+cache:
+  directories:
+    - $HOME/.gradle/caches/
+    - $HOME/.gradle/wrapper/
 
-jobs:
-  include:
-    - stage: test
-      jdk:
-        - oraclejdk11
-        - openjdk11
-#      script: ./gradlew clean test
-    cache:
-      directories:
-        - $HOME/.gradle/caches/
-        - $HOME/.gradle/wrapper/
+script:
+  - ./gradlew clean test
+
+stages:
+  - test
