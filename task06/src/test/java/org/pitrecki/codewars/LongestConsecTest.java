@@ -2,11 +2,9 @@ package org.pitrecki.codewars;
 
 import junitparams.JUnitParamsRunner;
 import junitparams.Parameters;
-import org.assertj.core.api.Assertions;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import java.util.Arrays;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -21,7 +19,6 @@ public class LongestConsecTest {
     public void shouldMergeLongestStrings(List<String> list, int elements, String expected) {
         String actual = longestConsec.longestConsec(list.toArray(new String[0]), elements);
         assertThat(actual).isEqualTo(expected);
-
     }
 
     private static Object[] parameters() {
@@ -37,6 +34,4 @@ public class LongestConsecTest {
                 new Object[]{List.of("it", "wkppv", "ixoyx", "3452", "zzzzzzzzzzzz"), 0, ""}
         };
     }
-
-    ;
 }
